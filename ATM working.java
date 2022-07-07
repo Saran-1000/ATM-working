@@ -11,27 +11,29 @@ class bank{
     }
     Scanner sc=new Scanner(System.in);
     void deposit(){
-        System.out.println("enter the amount you want to deposit");
-        int amt=sc.nextInt();
         System.out.println("enter the pin");
         p=sc.nextInt();
         if(pin==p){
+             System.out.println("enter the amount you want to deposit");
+            int amt=sc.nextInt();
             bal=bal+amt;
-            System.out.println("amt is deposited - "+bal);
+            System.out.println("amt is deposited : "+bal);
         }
         else{
             System.out.println("enter the correct pin!!");
         }
     }
     void withdraw(){
-        System.out.println("enter the amount");
-        amt=sc.nextInt();
+        
         System.out.println("enter the pin");
         p=sc.nextInt();
+       
         if(amt>=bal){
         if(pin==p){
+            System.out.println("enter the amount");
+            amt=sc.nextInt();
             bal=bal-amt;
-            System.out.println("amt is withdrawed - "+bal);
+            System.out.println("amt is withdrawed:) balance : "+bal);
         }
         else{
             System.out.println("enter the correct pin!!");
@@ -78,6 +80,7 @@ class bank{
 }
     class Main{
         public static void main(String[] args){
+            System.out.println("Insert your card..");
             Scanner sc=new Scanner(System.in);
             int  opt1;
             bank d=new bank();
@@ -112,7 +115,7 @@ class bank{
             System.out.println("invalid option!!!");
             }
             }
-           System.out.println("want to continue 1 illana 0");
+           System.out.println("want to continue press 1 else press 0");
            opt1=sc.nextInt();
           } while(opt1!=0);
     }
